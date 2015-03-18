@@ -3,13 +3,79 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fade 2 images</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	ul{
+		columns: 4;
+  		-webkit-columns: 4;
+  		-moz-columns: 4;
+	}
+	li{width: 300px; position: relative; list-style: none; height: 300px; }
+	.image1{position: absolute; top: 0px;left:0px; width: 300px; height: 300px}
+	.image2{position: absolute; top: 0px;left:0px; width: 300px; height: 300px;
+	-webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+	}
+	li:nth-child(2) .image2{animation-delay:1s;}
+	li:nth-child(3) .image2{animation-delay:2s;}
+	li:nth-child(4) .image2{animation-delay:3s;}
+	li:nth-child(5) .image2{animation-delay:4s;}
+	li:nth-child(6) .image2{animation-delay:5s;}
+	li:nth-child(7) .image2{animation-delay:6s;}
+	li:nth-child(8) .image2{animation-delay:7s;}
+
+	@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+	}
+	@keyframes fade {
+	    0% {opacity: 0;}
+	    20% {opacity: 1;}
+	    33% {opacity: 1;}
+	    53% {opacity: 0;}
+	    100% {opacity: 0;}
+	}
+	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6"><img class="img-responsive" src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" id="image1"></div>
-			<div class="col-md-6"><img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" id="image2"></div>
-		</div>	
+	<ul>
+		<li>1
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>2
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>3
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>4
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>5
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>6
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>7
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
+		<li>8
+			<img src="http://www.gstatic.com/webp/gallery/1.jpg" alt="image1" class="image1">
+			<img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="image2" class="image2">
+		</li>
 </body>
 </html>
